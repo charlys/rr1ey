@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  docid: 1
+  patid: 1
+  date: 2012-01-17
+  time: 2012-01-17 22:17:06
+  comment: MyText
+
+two:
+  docid: 1
+  patid: 1
+  date: 2012-01-17
+  time: 2012-01-17 22:17:06
+  comment: MyText

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1327358821.515625:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%0f5801bc8805397e4fe61ae085ed515bI"logical_path;
+FI"Web-page_logo-uni.gif;
+TI"pathname;
+FI"2$root/app/assets/images/Web-page_logo-uni.gif;
+TI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2010-03-21T17:29:48-06:00;
+FI"length;
+FI"	3064;
+FI"digest;
+F"%777894f42092901490912e1812be1dddI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

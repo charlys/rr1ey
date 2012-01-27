@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1327345128.71875:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%3606de0af0df67bf3046c016a680bbfdI"logical_path;
+FI"#Web-page_background_center.jpg;
+TI"pathname;
+FI";$root/app/assets/images/Web-page_background_center.jpg;
+TI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2010-03-21T17:29:48-06:00;
+FI"length;
+FI"	8374;
+FI"digest;
+F"%19a557fa6281c53bffe2769818488453I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

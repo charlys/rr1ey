@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  fechanac: 2012-01-17
+  history: MyText
+  mail: MyString
+  phone: MyString
+  address: MyString
+
+two:
+  name: MyString
+  fechanac: 2012-01-17
+  history: MyText
+  mail: MyString
+  phone: MyString
+  address: MyString

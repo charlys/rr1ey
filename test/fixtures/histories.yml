@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  histpatid: 1
+  histdate: 2012-01-16
+  histime: 2012-01-16 14:20:56
+  comment: MyText
+
+two:
+  histpatid: 1
+  histdate: 2012-01-16
+  histime: 2012-01-16 14:20:56
+  comment: MyText

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1327359148.59375:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%70e5937f3178eda2f9c2ca2f5abc182aI"logical_path;
+FI"logoinub2.JPG;
+TI"pathname;
+FI"*$root/app/assets/images/logoinub2.JPG;
+TI"content_type;
+FI"application/octet-stream;
+FI"
+mtime;
+FI"2012-01-23T16:52:07-06:00;
+FI"length;
+FI"	4469;
+FI"digest;
+F"%71a0f8d65cb9f95e632de53c1ca7356dI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

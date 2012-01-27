@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1327345006.796875:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%218e2a350e677bbbf50458b346a00700I"logical_path;
+FI"Web-page_logo-inub2.jpg;
+TI"pathname;
+FI"4$root/app/assets/images/Web-page_logo-inub2.jpg;
+TI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2011-08-11T12:08:24-05:00;
+FI"length;
+FI"
+11701;
+FI"digest;
+F"%0daf282307e7085e3a46de1b3a97bcabI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  instname: MyString
+  instfechaini: 2012-01-16
+  instmail: MyString
+  instel: MyString
+  instaddress: MyText
+
+two:
+  instname: MyString
+  instfechaini: 2012-01-16
+  instmail: MyString
+  instel: MyString
+  instaddress: MyText

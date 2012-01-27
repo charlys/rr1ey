@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1327356806.859375:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%0622b627348b74ba3d3719653d44e3c8I"logical_path;
+FI"wallpaper.jpg;
+TI"pathname;
+FI"*$root/app/assets/images/wallpaper.jpg;
+TI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-01-23T16:12:16-06:00;
+FI"length;
+FI"1162560;
+FI"digest;
+F"%cc5c50d1b3132eda5533779bee23f9c0I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

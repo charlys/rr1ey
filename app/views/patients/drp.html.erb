@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @dr.name %> <%= @dr.id %></h1>
+
+<table>
+ <tr>
+   <th>name</th>
+   <th>email</th>
+   <th>dr_id</th>
+   <th></th>
+   <th></th>
+   <th></th>
+  </tr>
+
+<% @dr.patients.each do |p| %>
+<tr>
+   <td><%= p.name%></td>
+   <td><%= p.mail%></td>
+   <td><%= p.doctor_id%></td>
+   <td><%= link_to 'Show', p %></td>
+   <td><%= link_to 'Edit', edit_patient_path(p) %></td>
+   <td><%= link_to 'Destroy', p, confirm: 'Are you sure?', method: :delete %></td>
+ </tr>
+<% end %>
+</table>
