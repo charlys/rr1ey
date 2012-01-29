@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # agregado para heroku
-source :rubygems
+#source :rubygems
 #gem 'application_controller', '1.1.0'
 #gem 'thin', '1.2.7'
 #hasta aca
