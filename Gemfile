@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 #source :rubygems
 #gem 'application_controller', '1.1.0'
 #gem 'thin', '1.2.7'
-#hasta aca
+# hasta aca
 
 # para ey
 gem 'bundler', '~> 1.0.17'
