@@ -42368,3 +42368,98 @@ Started GET "/patients/1" for 127.0.0.1 at 2012-01-27 14:15:39 -0600
   [1m[36mPatient Load (0.0ms)[0m  [1mSELECT `patients`.* FROM `patients` WHERE `patients`.`id` = 1 LIMIT 1[0m
 Rendered patients/show.html.erb within layouts/application (390.6ms)
 Completed 200 OK in 719ms (Views: 687.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2012-01-29 10:03:14 -0600
+Served asset /wallpaper.jpg - 304 Not Modified (15ms)
+
+
+Started GET "/assets/Web-page_background_center.jpg" for 127.0.0.1 at 2012-01-29 10:03:15 -0600
+Served asset /Web-page_background_center.jpg - 304 Not Modified (62ms)
+
+
+Started GET "/doctors" for 127.0.0.1 at 2012-01-29 10:04:21 -0600
+  Processing by DoctorsController#index as HTML
+  [1m[36mDoctor Load (0.0ms)[0m  [1mSELECT `doctors`.* FROM `doctors` [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `patients` WHERE `patients`.`doctor_id` = 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `patients` WHERE `patients`.`doctor_id` = 2[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `patients` WHERE `patients`.`doctor_id` = 3
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM `patients` WHERE `patients`.`doctor_id` = 4[0m
+Rendered doctors/index.html.erb within layouts/application (1703.1ms)
+Completed 200 OK in 3484ms (Views: 3453.1ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /contacts.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /appointments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/doctors.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /doctors.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/doctor.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /doctor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /patients.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/patient.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /patient.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /jquery.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /appointments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /contacts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/doctor.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /doctor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/doctors.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /doctors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patient.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /patient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /patients.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-29 10:04:27 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logoinub2.JPG" for 127.0.0.1 at 2012-01-29 10:04:28 -0600
+Served asset /logoinub2.JPG - 304 Not Modified (15ms)
+
+
+Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2012-01-29 10:04:28 -0600
+Served asset /wallpaper.jpg - 304 Not Modified (0ms)
