@@ -7,7 +7,7 @@ source 'http://rubygems.org'
 #hasta aca
 
 # para ey
-#gem 'bundler', '~> 1.0.17'
+gem 'bundler', '~> 1.0.17'
 
 gem 'rails', '3.1.3'
 
