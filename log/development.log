@@ -42463,3 +42463,11 @@ Served asset /logoinub2.JPG - 304 Not Modified (15ms)
 
 Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2012-01-29 10:04:28 -0600
 Served asset /wallpaper.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wallpaper.jpg" for 127.0.0.1 at 2012-01-29 14:58:30 -0600
+Served asset /wallpaper.jpg - 304 Not Modified (15ms)
+
+
+Started GET "/assets/Web-page_background_center.jpg" for 127.0.0.1 at 2012-01-29 14:58:31 -0600
+Served asset /Web-page_background_center.jpg - 304 Not Modified (46ms)
