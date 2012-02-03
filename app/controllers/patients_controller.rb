@@ -1,12 +1,13 @@
 class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
+  
   def index
-    if (params[:id] == nil)
+    if (params[:id] == nil and current_user.email == "charly613@gmail.com")
 		@patients = Patient.all
 	else
-		@dr = Doctor.find(params[:id])
-		@patients = Doctor,patients
+		@dr = Doctor.find(current_user.id)
+		@patients = @dr.patients
 	end
 		
     respond_to do |format|
@@ -18,18 +19,24 @@ class PatientsController < ApplicationController
   # GET /patients/1
   # GET /patients/1.json
   def show
-     @patient = Patient.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @patient }
-    end
+    @patient = Patient.find(params[:id])
+	if (@patient.doctor_id == current_user.id) 
+		respond_to do |format|
+		format.html # show.html.erb
+		format.json { render json: @patient }
+		end
+	else
+		redirect_to :action => 'index'
+	end
   end
   
-   # GET /patients/new
+  # GET /patients/new
   # GET /patients/new.json
   def new
-    @patient = Patient.new
+	@d = Doctor.find(current_user.id)
+	@patient = @d.patients.build
+	@patient.save	
+    #@patient = Patient.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,18 +50,25 @@ class PatientsController < ApplicationController
   end
   
   def drp
-    @dr = Doctor.find(params[:id])
-	
-	respond_to do |format|
-      format.html # drp.html.erb
-      format.json { render json: @patient }
-    end
+	if ( current_user.id == Integer(params[:id]) or current_user.email == "charly613@gmail.com" )
+		@dr = Doctor.find(params[:id])
+		respond_to do |format|
+		format.html # drp.html.erb
+		format.json { render json: @patient }
+		end
+	else
+		redirect_to doctor_url(current_user.id)
+		flash[:error] = "You must be logged in to access this section"
+	end
   end
   
   # POST /patients
   # POST /patients.json
   def create
-    @patient = Patient.new(params[:patient])
+	@doctor = Patient.find(params[:id])
+	@patient = @doctor.patients.build(params[:patient])
+	
+    #@patient = Patient.new(params[:patient])
 
     respond_to do |format|
       if @patient.save

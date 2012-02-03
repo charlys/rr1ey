@@ -1,13 +1,37 @@
 class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
+  before_filter :only_user_id
+  
+  def only_user_id
+	if user_signed_in? 
+		if params[:id]== nil
+			param_int = 0
+		else
+			param_int = Integer(params[:id])
+		end
+		if (current_user.email != "charly613@gmail.com" and current_user.id != param_int )
+			params[:id] = current_user.id
+		end
+	else
+	redirect_to new_user_session_url
+	end
+  end
+  
   def index
-    @doctors = Doctor.all
-	
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @doctors }
-    end
+ #   if user_signed_in? 
+	   if current_user.email == "charly613@gmail.com"
+			@doctors = Doctor.all
+			respond_to do |format|
+			format.html # index.html.erb
+			format.json { render json: @doctors }
+			end
+			else
+			redirect_to doctor_url(current_user.id)
+		end
+#	else
+#	redirect_to new_user_session_url
+#	end  
   end
 
   # GET /doctors/1
