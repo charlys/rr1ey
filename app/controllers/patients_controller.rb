@@ -4,23 +4,24 @@ class PatientsController < ApplicationController
   
   def index
     if (params[:id] == nil and current_user.email == "charly613@gmail.com")
-		@patients = Patient.all
+		#@patients = Patient.all
+		redirect_to users_url
 	else
-		@dr = Doctor.find(current_user.id)
-		@patients = @dr.patients
+		@usr = User.find(current_user.id)
+		@patients = @usr.patients
+	
+		respond_to do |format|
+		format.html # index.html.erb
+		format.json { render json: @patients }
+		end
 	end
-		
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @patients }
-    end
   end
 
   # GET /patients/1
   # GET /patients/1.json
   def show
     @patient = Patient.find(params[:id])
-	if (@patient.doctor_id == current_user.id) 
+	if (@patient.user_id == current_user.id) 
 		respond_to do |format|
 		format.html # show.html.erb
 		format.json { render json: @patient }
@@ -33,8 +34,8 @@ class PatientsController < ApplicationController
   # GET /patients/new
   # GET /patients/new.json
   def new
-	@d = Doctor.find(current_user.id)
-	@patient = @d.patients.build
+	@u = User.find(current_user.id)
+	@patient = @u.patients.build
 	@patient.save	
     #@patient = Patient.new
 
@@ -51,13 +52,13 @@ class PatientsController < ApplicationController
   
   def drp
 	if ( current_user.id == Integer(params[:id]) or current_user.email == "charly613@gmail.com" )
-		@dr = Doctor.find(params[:id])
+		@usr = User.find(params[:id])
 		respond_to do |format|
 		format.html # drp.html.erb
 		format.json { render json: @patient }
 		end
 	else
-		redirect_to doctor_url(current_user.id)
+		redirect_to user_url(current_user.id)
 		flash[:error] = "You must be logged in to access this section"
 	end
   end
@@ -65,8 +66,8 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.json
   def create
-	@doctor = Patient.find(params[:id])
-	@patient = @doctor.patients.build(params[:patient])
+	@usr = Patient.find(params[:id])
+	@patient = @usr.patients.build(params[:patient])
 	
     #@patient = Patient.new(params[:patient])
 

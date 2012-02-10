@@ -12,6 +12,7 @@ body {background-image: url("/assets/wallpaper.jpg");}
   <%= csrf_meta_tags %>
 </head>
 
+
 <div>
 <% if user_signed_in? %>
     ID:<%= current_user.id %>  <%= current_user.email %> is logged in. If user is not you, click <%= link_to "Sign Out", destroy_user_session_path %>
@@ -19,7 +20,7 @@ body {background-image: url("/assets/wallpaper.jpg");}
     <%= link_to "Register", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
 <% end %>
 </div>
-
+<hr />
 <body>
 
 <%= yield %>

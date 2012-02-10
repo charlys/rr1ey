@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120117234716) do
+ActiveRecord::Schema.define(:version => 20120209230529) do
+
+  create_table "appointments", :force => true do |t|
+    t.integer  "docid"
+    t.integer  "patid"
+    t.date     "date"
+    t.time     "time"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contacts", :force => true do |t|
     t.string   "type"
@@ -21,12 +31,10 @@ ActiveRecord::Schema.define(:version => 20120117234716) do
   end
 
   create_table "doctors", :force => true do |t|
-    t.string   "docname"
-    t.string   "docemail"
-    t.date     "docfechainicio"
-    t.string   "doctel"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
     t.string   "docmobile"
-    t.string   "docspeciality"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -59,6 +67,8 @@ ActiveRecord::Schema.define(:version => 20120117234716) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "doctor_id"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

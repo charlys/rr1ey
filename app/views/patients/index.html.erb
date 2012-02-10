@@ -1,10 +1,10 @@
-<h1>Listing patients</h1>
+<h1>Listing </h1>
 
 <table>
   <tr>
-	<th>Doctor_id</th>
-    <th>Name</th>
-    <th>Fechanac</th>
+	<th>User_id</th>
+    <th>Name/Object</th>
+    <th>Birthday</th>
     <th>History</th>
     <th>Mail</th>
     <th>Phone</th>
@@ -16,7 +16,7 @@
 
 <% @patients.each do |patient| %>
   <tr>
-	<td><%= patient.doctor_id %></td>
+	<td><%= patient.user_id %></td>
     <td><%= patient.name %></td>
     <td><%= patient.fechanac %></td>
     <td><%= patient.history %></td>
