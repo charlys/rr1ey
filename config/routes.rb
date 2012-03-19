@@ -21,7 +21,9 @@ match 'mlo' => 'Patients#mail_list_objects'
 
 match 'papp.:id' => 'Appointments#papp'
 match 'papp/' => 'Appointments#papp'
+
 match 'mailpatientappoint.:id' => 'Appointments#mail_list_app' 
+match 'mailpatientappoint' => 'Appointments#mail_list_app' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
