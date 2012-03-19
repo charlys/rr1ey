@@ -19,14 +19,21 @@ body {background-image: url("/assets/wallpaper.jpg");}
 <% else %>
     <%= link_to "Register", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
 <% end %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+  <div class="error"><%= flash[:error] %></div>
+<% end %>
+
 </div>
 <hr />
 <body>
 
 <%= yield %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 
 </body>
+<br><br>
 <img src= "/assets/logoinub2.JPG" height="30" width="100" />
 </html>

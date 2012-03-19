@@ -2,11 +2,11 @@
 
 <table>
   <tr>
-    <th>Docid</th>
-    <th>Patid</th>
+    <th>User_id</th>
+    <th>Object_id</th>
     <th>Date</th>
     <th>Time</th>
-    <th>Comment</th>
+    <th style="color:black;text-align:left">Comment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,10 +14,10 @@
 
 <% @appointments.each do |appointment| %>
   <tr>
-    <td><%= appointment.docid %></td>
-    <td><%= appointment.patid %></td>
-    <td><%= appointment.date %></td>
-    <td><%= appointment.time %></td>
+    <td><%= appointment.user_id %></td>
+    <td><% p= Patient.find(appointment.patient_id) %><%= p.name %></td>
+    <td><%= appointment.date.strftime("%Y-%m-%d") %></td>
+    <td><%= appointment.time.strftime("%H:%m") %></td>
     <td><%= appointment.comment %></td>
     <td><%= link_to 'Show', appointment %></td>
     <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>

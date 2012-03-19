@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <! User: <%= @user.email %> >
+	<h1> Patient: <%= @patient.name %></h1>
+	<table cellspacing="10" align="left">
+		<tr>
+		<th>Date</th>
+		<th>Time</th>
+		<th text-align:left">Comment</th>
+		</tr>	
+		<% @appointments.each do |app| %>
+		<tr>
+		<td><%= app.date.strftime("%Y-%m-%d")%></td>
+		<td><%= app.time.strftime("%H:%m")%></td>
+		<td><%= app.comment%></td>
+		</tr>
+		<% end %>
+		
+	</table>
+  </body>
+</html>

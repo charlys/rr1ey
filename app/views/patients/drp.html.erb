@@ -1,25 +1,33 @@
-<p id="notice"><%= notice %></p>
-
 <h1>ID:<%= @usr.id %>  <%= @usr.email %> </h1>
+<p><%= button_to "Mail",mlo_path %> </p>
+<p><%=link_to 'Mail', mlo_path %><%=yield(:mailstatus)%> </p>
 
+<%= debug @usr %>
 <table>
  <tr>
+   <th>Object Type</th>
    <th>name</th>
    <th>email</th>
    <th>usr_id</th>
    <th></th>
    <th></th>
    <th></th>
-  </tr>
+   <th></th>
+   <th></th>
+ </tr>
 
 <% @usr.patients.each do |p| %>
 <tr>
+   <td><%= p.object_title %></td>
    <td><%= p.name%></td>
    <td><%= p.mail%></td>
    <td><%= p.user_id%></td>
    <td><%= link_to 'Show', p %></td>
    <td><%= link_to 'Edit', edit_patient_path(p) %></td>
    <td><%= link_to 'Destroy', p, confirm: 'Are you sure?', method: :delete %></td>
+   <td><%= link_to 'Appointments', p.appointments.count>0 ? papp_path(p) : appointments_path %></td>
+   <td><%= p.appointments.count %></td>
  </tr>
 <% end %>
+
 </table>

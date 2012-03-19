@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>User: <%= @user.email %></h1>
+	<table>
+	<tr>
+		<th>name</th>
+		<th>birthday</th>
+		<th>mail</th>
+		<th>phone</th>
+	</tr>
+	
+		<% @patients.each do |p| %>
+			<tr>
+			<td><%= p.name %></td>
+			<td><%= p.fechanac %></td>
+			<td><%= p.mail %></td>
+			<td><%= p.phone %></td>
+			</tr>
+		<% end %>
+	<table>
+  </body>
+</html>

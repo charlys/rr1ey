@@ -2,14 +2,35 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @appointments = Appointment.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @appointments }
-    end
+	if (params[:id] == nil and current_user.email == "charly613@gmail.com")
+		#@patients = Patient.all
+		redirect_to users_url
+	else
+		@usr = User.find(current_user.id)
+		@appointments = @usr.appointments
+		
+		respond_to do |format|
+			format.html # index.html.erb
+			format.json { render json: @appointments }
+		end
+	end
   end
-
+  
+def papp
+		@patient = Patient.find(params[:id])
+		respond_to do |format|
+		format.html # papp.html.erb
+		format.json { render json: @appointment }
+		end
+end
+  
+def mail_list_app
+	@patient=Patient.find( params[:id] )
+	flash[:notice] = 'sending Mail ' + @patient.name
+  	UserMailer.send_appointemail( params[:id], current_user , "List Comments").deliver
+	#render :text =>  'Sending Mail' # DISPLAY WHITE PAGE WITH MESSAGE
+end
+  
   # GET /appointments/1
   # GET /appointments/1.json
   def show
@@ -24,7 +45,9 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   # GET /appointments/new.json
   def new
-    @appointment = Appointment.new
+	@u = User.find(current_user.id)
+	@appointment = @u.appointments.build
+    @appointment.save 
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,6 +57,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+
     @appointment = Appointment.find(params[:id])
   end
 

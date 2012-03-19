@@ -1,0 +1,27 @@
+<!-- listing Patients-->
+<h1>ID:<%= @patient.id %>  <%= @patient.name %> </h1>
+<p><%= button_to "Mail",mailpatientappoint_path(@patient.id) %> </p>
+<p><%=link_to 'Mail', mailpatientappoint_path(@patient.id) %><%=yield(:mailstatus)%> </p>
+
+<table cellspacing="10" align="left">
+ <tr>
+    <th>Date</th>
+   <th>Time</th>
+   <th style="color:black;text-align:left">Comment</th>
+   <th></th>
+   <th></th>
+   <th></th>
+ </tr>
+
+<% @patient.appointments.each do |app| %>
+<tr>
+   <td><%= app.date.strftime("%Y-%m-%d")%></td>
+   <td><%= app.time.strftime("%H:%m")%></td>
+   <td><%= app.comment%></td>
+   <td><%= link_to 'Show', app %></td>
+   <td><%= link_to 'Edit', edit_patient_path(app) %></td>
+   <td><%= link_to 'Destroy', app, confirm: 'Are you sure?', method: :delete %></td>
+ </tr>
+<% end %>
+
+</table>

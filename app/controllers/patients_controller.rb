@@ -51,7 +51,7 @@ class PatientsController < ApplicationController
   end
   
   def drp
-	if ( current_user.id == Integer(params[:id]) or current_user.email == "charly613@gmail.com" )
+	if ( current_user.id == Integer(params[:id]) or current_user.email == 'charly613@gmail.com' )
 		@usr = User.find(params[:id])
 		respond_to do |format|
 		format.html # drp.html.erb
@@ -61,6 +61,12 @@ class PatientsController < ApplicationController
 		redirect_to user_url(current_user.id)
 		flash[:error] = "You must be logged in to access this section"
 	end
+  end
+  
+  def mail_list_objects
+	flash[:notice] = 'sending Mail '
+  	UserMailer.send_email(current_user , "List Objects").deliver
+	#render :text =>  'Sending Mail' # DISPLAY WHITE PAGE WITH MESSAGE
   end
   
   # POST /patients
@@ -109,4 +115,5 @@ class PatientsController < ApplicationController
       format.json { head :ok }
     end
   end
+ 
 end

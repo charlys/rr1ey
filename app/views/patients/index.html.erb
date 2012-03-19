@@ -1,8 +1,10 @@
+<!-- listing Patients-->
 <h1>Listing </h1>
 
 <table>
   <tr>
 	<th>User_id</th>
+	<th>Object Type</th>
     <th>Name/Object</th>
     <th>Birthday</th>
     <th>History</th>
@@ -17,6 +19,7 @@
 <% @patients.each do |patient| %>
   <tr>
 	<td><%= patient.user_id %></td>
+	<td><%= patient.object_title %></td>
     <td><%= patient.name %></td>
     <td><%= patient.fechanac %></td>
     <td><%= patient.history %></td>
@@ -26,6 +29,9 @@
     <td><%= link_to 'Show', patient %></td>
     <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
     <td><%= link_to 'Destroy', patient, confirm: 'Are you sure?', method: :delete %></td>
+	<td><%= link_to 'Appointments', patient.appointments.count>0 ? papp_path(patient) : appointments_path %></td>
+	<td><%= patient.appointments.count %></td>
+
   </tr>
 <% end %>
 </table>

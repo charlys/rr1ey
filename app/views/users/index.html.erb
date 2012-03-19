@@ -8,6 +8,7 @@
     <th></th>
 	<th></th>
 	<th></th>
+	<th></th>
   </tr>
 
 <% @users.each do |user| %>
@@ -16,8 +17,10 @@
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-	<td><%= link_to 'Patients:' , drp_path(user) %></td> 
+	<td><%= link_to 'Objects:' , drp_path(user) %></td> 
 	<td><%= user.patients.count %></td>
+	<td><%= link_to 'Appointments:' , user.appointments.count > 0 ? papp_path(user): nil %></td> 
+	<td><%= user.appointments.count %></td>
   </tr>
 <% end %>
 </table>

@@ -10,13 +10,19 @@ Rr1::Application.routes.draw do
   end
   
  resources :doctors 
-    resources :patients
- 
+ resources :patients
+
   resources :appointments
   resources :contacts
 match 'drp.:id' => 'Patients#drp'
 match 'drp/' => 'Patients#drp'
 match 'patients.:id' => 'Patients#index'
+match 'mlo' => 'Patients#mail_list_objects' 
+
+match 'papp.:id' => 'Appointments#papp'
+match 'papp/' => 'Appointments#papp'
+match 'mailpatientappoint.:id' => 'Appointments#mail_list_app' 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

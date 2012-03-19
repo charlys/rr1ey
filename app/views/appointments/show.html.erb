@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Docid:</b>
-  <%= @appointment.docid %>
+  <b>User_id:</b>
+  <%= @appointment.user_id %>
 </p>
 
 <p>
-  <b>Patid:</b>
-  <%= @appointment.patid %>
+  <b>Patient_id:</b>
+  <% p= Patient.find(@appointment.patient_id) %>
+  <%= p.name %>
 </p>
 
 <p>

@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :docid %><br />
-    <%= f.number_field :docid %>
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id, :disabled => true %>
   </div>
   <div class="field">
-    <%= f.label :patid %><br />
-    <%= f.number_field :patid %>
+    <%= f.label :patient_id %><br />
+	<%= f.collection_select :patient_id, Patient.all, :id, :name,:include_blank => true %>
+	<%= f.number_field :patient_id, :disabled => true %>
   </div>
   <div class="field">
     <%= f.label :date %><br />
