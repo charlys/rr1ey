@@ -4,7 +4,7 @@
 #	:port                 => 587,
 #	:domain               => 'gmail.com',
 #	:user_name            => 'intelcohm@gmail.com',
-#	:password             => 'intelco.613',
+#	:password             => '',
 #	:authentication       => 'plain',
 #	:enable_starttls_auto => true  
 
@@ -12,7 +12,7 @@
 #	:port                 => 26,
 #	:domain               => 'gmail.com',
 #	:user_name            => 'jcredi@multisenal.com.mx',
-#	:password             => 'jcredi030309',
+#	:password             => '',
 #	:authentication       => :login,
 #	:enable_starttls_auto => true  
  
@@ -21,5 +21,5 @@
 #	:domain => 'yahoo.com',
 #	:authentication => :login,
 #	:user_name => 'charly613@yahoo.com.mx',
-#	:password => '53954540'
+#	:password => ''
   }
