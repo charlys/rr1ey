@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "intelcohm@gmail.com"
+  default from: "distpants@gmail.com"
   
   def welcome_email(user)
     @user = user
@@ -26,7 +26,7 @@ class UserMailer < ActionMailer::Base
 	@mail_subject = mail_subject
 	@appointments = Appointment.where("patient_id = "+patient) 
     @url  = "http://localhost:3000/login"
-	attachments['logoinub2.jpg'] = File.read("#{Rails.root.to_s + '/app/assets/images/logoinub2.jpg'}")
+	#attachments['logoinub2.jpg'] = File.read("#{Rails.root.to_s + '/app/assets/images/logoinub2.jpg'}")
 	
 	#attachments.inline['logo'] = {:data => File.read("#{Rails.root.to_s + '/app/assets/images/logoinub2.JPG'}"), :mime_type => "image/jpg", :encoding => "7bit"}
 	
