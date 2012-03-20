@@ -35,21 +35,20 @@ Rr1::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
   ActionMailer::Base.smtp_settings = {
-	:address              => "smtp.gmail.com",
-	:port                 => 587,
-	:domain               => 'gmail.com',
-	:user_name            => 'distpants@gmail.com',
-	:password             => 'distpants.613',
-	:authentication       => 'plain',
-	:enable_starttls_auto => true  
+#	:address              => "smtp.gmail.com",
+#	:port                 => 587,
+#	:domain               => 'gmail.com',
+#	:user_name            => 'distpants@gmail.com',
+#	:password             => 'distpants.613',
+#	:authentication       => 'plain',
+#	:enable_starttls_auto => true  
 
-#	:address => 'smtp.mail.yahoo.com',
-#	:port => 587,
-#	:domain => 'yahoo.com',
-#	:authentication => :login,
-#	:user_name => 'charly613@yahoo.com.mx',
-#	:password => 'charly.613'
-#	:password => ''
+	:address => 'smtp.mail.yahoo.com',
+	:port => 587,
+	:domain => 'yahoo.com',
+	:authentication => :login,
+	:user_name => 'charly613@yahoo.com.mx',
+	:password => 'charly.613'
 	}
 
 # Raise exception on mass assignment protection for Active Record models
