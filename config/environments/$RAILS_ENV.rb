@@ -4,7 +4,7 @@
 #	:port                 => 587,
 #	:domain               => 'gmail.com',
 #	:user_name            => 'intelcohm@gmail.com',
-#	:password             => '',
+#	:password             => 'intelco.613',
 #	:authentication       => 'plain',
 #	:enable_starttls_auto => true  
 
