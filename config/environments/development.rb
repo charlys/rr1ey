@@ -38,8 +38,8 @@ Rr1::Application.configure do
 	:address              => "smtp.gmail.com",
 	:port                 => 587,
 	:domain               => 'gmail.com',
-	:user_name            => 'intelcohm@gmail.com',
-	:password             => 'intelco.613',
+	:user_name            => 'distpants@gmail.com',
+	:password             => 'distpants.613',
 	:authentication       => 'plain',
 	:enable_starttls_auto => true  
 
@@ -48,7 +48,7 @@ Rr1::Application.configure do
 #	:domain => 'yahoo.com',
 #	:authentication => :login,
 #	:user_name => 'charly613@yahoo.com.mx',
-#	:password => '53954540'
+#	:password => 'charly.613'
 	}
 
 # Raise exception on mass assignment protection for Active Record models

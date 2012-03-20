@@ -3,23 +3,8 @@
 #	:address              => "smtp.gmail.com",
 #	:port                 => 587,
 #	:domain               => 'gmail.com',
-#	:user_name            => 'intelcohm@gmail.com',
-#	:password             => 'intelco.613',
+#	:user_name            => 'distpants@gmail.com',
+#	:password             => '',
 #	:authentication       => 'plain',
 #	:enable_starttls_auto => true  
-
-#	:address              => "mail.multisenal.com.mx",
-#	:port                 => 26,
-#	:domain               => 'gmail.com',
-#	:user_name            => 'jcredi@multisenal.com.mx',
-#	:password             => 'jcredi030309',
-#	:authentication       => :login,
-#	:enable_starttls_auto => true  
- 
-#	:address => 'smtp.mail.yahoo.com',
-#	:port => 587,
-#	:domain => 'yahoo.com',
-#	:authentication => :login,
-#	:user_name => 'charly613@yahoo.com.mx',
-#	:password => '53954540'
   }
