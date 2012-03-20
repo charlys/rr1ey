@@ -68,13 +68,8 @@ Rr1::Application.configure do
 	:address              => "smtp.gmail.com",
 	:port                 => 587,
 	:domain               => 'gmail.com',
-<<<<<<< HEAD
 	:user_name            => 'distpants@gmail.com',
 	:password             => 'distpants.613',
-=======
-	:user_name            => 'intelcohm@gmail.com',
-	:password             => '',
->>>>>>> c4418c45478e6cb9e080c177a9902d4856331fbc
 	:authentication       => 'plain',
 	:enable_starttls_auto => true  
  
@@ -83,10 +78,7 @@ Rr1::Application.configure do
 #	:domain => 'yahoo.com',
 #	:authentication => :login,
 #	:user_name => 'charly613@yahoo.com.mx',
-<<<<<<< HEAD
 #	:password => 'charly.613' 
-=======
 #	:password => '' 
->>>>>>> c4418c45478e6cb9e080c177a9902d4856331fbc
 	}
 end
