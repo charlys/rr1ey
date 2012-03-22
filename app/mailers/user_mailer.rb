@@ -27,11 +27,16 @@ class UserMailer < ActionMailer::Base
 	@mail_subject = mail_subject
 	@appointments = Appointment.where("patient_id = "+patient) 
     @url  = "http://localhost:3000/login"
-	#attachments['logoinub2.jpg'] = File.read("#{Rails.root.to_s + '/app/assets/images/logoinub2.jpg'}")
+	#encoded_content = SpecialEncode(File.read("#{Rails.root.to_s + '/app/assets/images/wallpaper2.jpg'}"))
+	#attachments['logoinub2.jpg'] = {:mime_type => 'application/x-gzip',
+    #                           :encoding => 'SpecialEncoding',
+    #                           :content => encoded_content }
 	
-	#attachments.inline['logo'] = {:data => File.read("#{Rails.root.to_s + '/app/assets/images/logoinub2.JPG'}"), :mime_type => "image/jpg", :encoding => "7bit"}
+	#attachments['logoinub2.jpg'] = File.read("#{Rails.root.to_s + '/app/assets/images/wallpaper2.jpg'}")
 	
-    mail(	:to => user.email, :bcc => ["charly613@gmail.com", "CSA <charly613@gmail.com>"], :subject => @mail_subject)
+	#attachments.inline['amex.pdf'] = {:data => File.read("#{Rails.root.to_s + '/app/assets/images/amex.pdf'}"), :type => "application/pdf"}
+	attachments['amex.pdf'] = File.read("#{Rails.root.to_s + '/app/assets/images/amex.pdf'}")
+    mail(	:to => user.email, :bcc => ["intelco2@hotmail.com", "CSA <charly613@gmail.com>"], :subject => @mail_subject)
   end
 
   end
